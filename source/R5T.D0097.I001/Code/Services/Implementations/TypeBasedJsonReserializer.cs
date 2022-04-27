@@ -19,7 +19,8 @@ namespace R5T.D0097.I001
         private Dictionary<string, ITypeBasedJsonSerializationHandler<TBase>> HandlersBySerializationTypeIdentifier { get; } = new Dictionary<string, ITypeBasedJsonSerializationHandler<TBase>>();
 
 
-        public TypeBasedJsonReserializer(IEnumerable<ITypeBasedJsonSerializationHandler<TBase>> typeBasedJsonSerializationHandlers)
+        public TypeBasedJsonReserializer(
+            IEnumerable<ITypeBasedJsonSerializationHandler<TBase>> typeBasedJsonSerializationHandlers)
         {
             this.TypeBasedJsonSerializationHandlers = typeBasedJsonSerializationHandlers;
         }
